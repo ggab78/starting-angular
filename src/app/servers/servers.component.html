@@ -20,7 +20,8 @@
         (click)="onCreateServer()">Add Server</button>
 <p>{{allowNewServer}}</p>
 <p [innerText]="allowNewServer"></p>
-<p>{{serverCreationStatus}}</p>
+
+<p *ngIf="isCreated">{{serverCreationStatus}}</p>
 
 <br>
 <app-server></app-server>
