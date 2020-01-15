@@ -1,9 +1,18 @@
 <h3>Server components come below:</h3>
 <br>
-<label>Update server name</label>
+<label>Update server name - one way data binding</label>
+
 <input (input)="onUpdateServerName($event)"
        class="form-control"
        type="text">
+
+<label>Update server name - two ways data binding</label>
+
+<input [(ngModel)]="serverName"
+       class="form-control"
+       type="text">
+
+
 <p>{{serverName}}</p>
 
 <button class="btn btn-primary"
