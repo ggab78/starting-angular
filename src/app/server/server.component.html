@@ -1,5 +1,8 @@
 <br>
-<p [ngStyle]="{backgroundColor:getColor()}">{{'Server'}} ID {{ serverId }} is {{serverStatus}} or {{getServerStatus()}}</p>
+<p [ngClass]="{online: serverStatus ==='online'}"
+   [ngStyle]="{backgroundColor:getColor()}">
+  {{'Server'}} ID {{ serverId }} is {{serverStatus}} or {{getServerStatus()}}
+</p>
 
 <label>Update User Name</label>
 
