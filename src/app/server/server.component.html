@@ -13,6 +13,18 @@
 <p>User Name is {{userName}}</p>
 
 <button class=" btn btn-primary"
-[disabled]="userName === ''"
-(click)="userName = ''">Empty User Name
+        [disabled]="userName === ''"
+        (click)="userName = ''">Empty User Name
 </button>
+<hr>
+<button class="btn btn-primary"
+        (click)="onAddDetail()">Display Details
+</button>
+<br>
+<label>Detail</label>
+<input type="text"
+       class="form-control"
+       [(ngModel)]="detailText"
+>
+<h2>List of Details</h2>
+<p *ngFor="let detail of details; let i = index" [ngStyle]="{backgroundColor:getDetailColor(i)}" [ngClass]="{fifth: i >= 5}" >{{detail}}</p>
